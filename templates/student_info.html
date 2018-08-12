@@ -7,4 +7,14 @@
 
   <p>GitHub Account: {{ github }}</p>
 
+
+
+<table class="project-table"><thead><tr><td>Project</td><td>Grade</td></tr></thead>
+
+
+{% for project in grades %}
+	<tr><td> {{project[0]}}</td><td> {{project[1]}}</td></tr>
+{%endfor%}
+</table>
+
 {% endblock %}

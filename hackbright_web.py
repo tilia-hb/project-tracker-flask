@@ -6,6 +6,10 @@ import hackbright
 
 app = Flask(__name__)
 
+@app.route("/")
+def homepage():
+
+    return render_template("index.html")
 
 @app.route("/student")
 def get_student():
@@ -14,14 +18,18 @@ def get_student():
     github = request.args.get('github')
 
     first, last, github = hackbright.get_student_by_github(github)
-    
+
 
     #return "{} is the GitHub account for {} {}".format(github, first, last)
-
+    grades = hackbright.get_grades_by_github(github)
+    a,b = grades
 
 
     html = render_template("student_info.html", 
                             first=first, last=last, github=github,
+                            grades = grades,
+                            a=a,
+                            b=b
 
                             )
 

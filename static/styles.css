@@ -1,5 +1,41 @@
 body{
-margin:20px;
+margin:30px;
+margin-left: 90px;
 font-family: sans-serif;
 font-size: 12px;
+}
+input{
+	margin-bottom: 5px;
+
+}
+
+#no-bullets{
+
+	    list-style-type: none;
+
+}
+#logo{
+	height:20px;
+	margin: 0 10px;
+
+}
+.project-table{
+	padding:8px;
+	/*border-style: solid;*/
+	text-align: center;
+
+}
+td{
+	padding:8px;
+}
+thead{
+	font-size: 18px;
+
+}
+#database{
+	height: 40px;
+	width: 40px;
+	background-color: black;
+	margin:10px;
+
 }
